@@ -1,13 +1,13 @@
 <template>
   <!-- logo图片 -->
   <div class="logo">
-    <img :src="MenuLogo" alt="logo"/>
+    <img :src="ConneR_Logo" alt="logo"/>
     <span v-show="show" class="logo-title">{{ title }}</span>
   </div>
 </template>
 <script lang="ts" setup>
   // 导入asset文件夹下的logo图片
-  import MenuLogo from '@/assets/MenuLogo.png'
+  import ConneR_Logo from '@/assets/ConneR_Logo.png'
   import {ref, watch} from "vue";
   import {collapseStore} from "@/stores/collapse";
 
