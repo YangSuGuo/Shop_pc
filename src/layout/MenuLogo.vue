@@ -50,7 +50,7 @@
   }
 
   .logo-title {
-    color: #001528;
+    color: #FFF;
     font-weight: 800;
     line-height: 60px;
     font-size: 22px;
