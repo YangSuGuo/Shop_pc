@@ -3,7 +3,7 @@
 interface DialogProps {
   title: string,//标题
   visible: boolean,//是否可见
-  width: number,//宽度z
+  width: number,//宽度
   height: number//高度
 }
 
@@ -14,6 +14,7 @@ const props = withDefaults(defineProps<DialogProps>(), {
   width: 630,
   height: 280
 });
+
 //接收父组件传递的方法
 const emit = defineEmits(["onClose", "onConfirm"]);
 //定义弹框的关闭

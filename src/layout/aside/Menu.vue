@@ -194,14 +194,13 @@ let menuList = reactive([
 ],)
 // 不能折叠整个菜单
 // const isCollapse = ref(false)
-//12
+
 </script>
 <style scoped>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 92.5vh;
 }
-
 
 :deep(.el-sub-menu .el-sub-menu__title) {
   color: #f4f4f5 !important;
