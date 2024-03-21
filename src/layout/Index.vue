@@ -1,20 +1,23 @@
 <script lang="ts" setup>
-
-  import Menu from "@/layout/Menu.vue";
-  import Collapse from "./Collapse.vue"
+  import Menu from "@/layout/aside/Menu.vue";
+  import Collapse from "./header/Collapse.vue"
+  import BreadCrumb from "@/layout/header/BreadCrumb.vue";
 </script>
 
 <template>
   <div style="height: 100%">
     <el-container class="mycontainer">
+      <!--侧边栏-->
       <el-aside class="aside" width="auto">
         <Menu/>
       </el-aside>
       <el-container>
+        <!--顶栏-->
         <el-header class="header">
           <Collapse></Collapse>
+          <BreadCrumb></BreadCrumb>
         </el-header>
-        <el-main class="mymain" style="background-color: #FFF">
+        <el-main class="mymain">
           <router-view/>
         </el-main>
       </el-container>
@@ -25,7 +28,6 @@
 <style lang="scss" scoped>
   .mycontainer {
     height: 100%;
-
     .aside {
 
     }
@@ -41,5 +43,4 @@
 
     }
   }
-
 </style>

@@ -9,7 +9,7 @@ const routes: Array<RouteRecordRaw> = [
         children: [
             {
                 path: '/dashboard',
-                component: () => import('@/layout/dashboard.vue'),
+                component: () => import('@/layout/Dashboard.vue'),
                 name: 'dashboard',
                 meta: {
                     title: '首页',

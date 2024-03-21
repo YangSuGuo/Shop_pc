@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import {collapseStore} from "@/stores/collapse/index";
+  import {collapseStore} from "@/stores/collapse";
   import {computed} from 'vue';
   import {Expand, Fold} from "@element-plus/icons-vue";
 

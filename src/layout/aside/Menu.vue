@@ -16,11 +16,10 @@
 <script lang="ts" setup>
   // import {computed, reactive, ref} from "vue";
   import {computed, reactive} from "vue";
-
   import MenuItem from "./MenuItem.vue";
   import MenuLogo from "./MenuLogo.vue";
   import {useRoute} from "vue-router";
-  import {collapseStore} from '@/stores/collapse/index';
+  import {collapseStore} from '@/stores/collapse';
 
   const collStore = collapseStore()
   const isCollapse = computed(() => {
