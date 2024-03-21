@@ -1,17 +1,16 @@
 <template>
   <MenuLogo></MenuLogo>
   <el-menu
-      :collapse="isCollapse"
+      style="height:92.5vh; overflow-x: hidden; overflow-y: hidden; border-right-color: transparent"
       :default-active="activeIndex"
-      background-color="#304156"
       class="el-menu-vertical-demo"
-      router
-      style="height: 797px;overflow-x: hidden;   border-right-color: transparent"
+      :collapse="isCollapse"
       unique-opened
+      router
+      @open="handleOpen"
       @close="handleClose"
-      @open="handleOpen">
-    <MenuItem :menu-list="menuList">
-    </MenuItem>
+      background-color="#304156">
+    <MenuItem :menu-list="menuList"></MenuItem>
   </el-menu>
 </template>
 <script lang="ts" setup>
@@ -39,9 +38,8 @@
     const {path} = route;
     return path
   })
-
   let menuList = reactive([
-    {
+      {
       path: "/dashboard",
       component: "Layout",
       name: "dashboard",
@@ -195,13 +193,11 @@
   // 不能折叠整个菜单
   // const isCollapse = ref(false)
   // 需要展开和收起的菜单的方法
-
-
 </script>
 <style scoped>
   .el-menu-vertical-demo:not(.el-menu--collapse) {
     width: 200px;
-    min-height: 790px;
+    min-height: 92.5vh;
   }
 
   :deep(.el-sub-menu .el-sub-menu__title) {

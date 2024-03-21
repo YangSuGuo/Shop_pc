@@ -7,7 +7,7 @@
            active-text-color="#ffd04b"
            background-color="rgb(48,65,86)"
            router
-           style="height: 100%;overflow-x: hidden ; border-right-color: transparent"
+           style="height: 100%; overflow-x: hidden; border-right-color: transparent"
            text-color="#fff">
     <div style="height: 60px; line-height: 60px; text-align: center">
       <img src="../../src/assets/logo.png" style="width: 20px; position: relative; top:5px;margin-right: 5px ">

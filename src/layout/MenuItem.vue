@@ -4,8 +4,7 @@
 <template>
   <template v-for="menu in menuList" :key="menu.path">
     <!-- 若一级菜单下有二级菜单 -->
-    <el-sub-menu v-if="menu.children && menu.children.length > 0"
-                 :index="menu.path">
+    <el-sub-menu v-if="menu.children && menu.children.length > 0" :index="menu.path">
       <!-- 读取一级菜单 -->
       <template #title>
         <el-icon>

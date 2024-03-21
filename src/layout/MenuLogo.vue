@@ -9,7 +9,7 @@
   // 导入asset文件夹下的logo图片
   import MenuLogo from '@/assets/MenuLogo.png'
   import {ref, watch} from "vue";
-  import {collapseStore} from "@/stores/collapse/index";
+  import {collapseStore} from "@/stores/collapse";
 
   const store = collapseStore();
   const show = ref(true)
@@ -19,7 +19,7 @@
         if (!collapsed) {
           setTimeout(() => {
             show.value = !collapsed;
-          }, 300);
+          }, 500);
         } else {
           show.value = !collapsed;
         }
@@ -35,7 +35,7 @@
     width: 100%;
     height: 60px;
     line-height: 60px;
-    background: #2b2f3a;
+    background: #334054;
     text-align: center;
     cursor: pointer;
     align-items: center;
