@@ -4,6 +4,7 @@ export const collapseStore = defineStore('collapseStore', {
     // 定义共享数据
     state: () => {
         return {
+            // 侧边栏状态
             collapse: false
         }
     },

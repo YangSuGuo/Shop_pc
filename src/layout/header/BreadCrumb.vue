@@ -1,13 +1,8 @@
 <script setup lang="ts">
-
-//引入所需函数
 import {onMounted, ref, Ref, watch} from "vue";
-//引入路由
 import {useRoute, RouteLocationMatched} from "vue-router";
 
-//获取当前路由
 const route = useRoute();
-//定义面包屑导航数据
 const tabs: Ref<RouteLocationMatched[]> = ref([]);
 //监听当前路由
 watch(

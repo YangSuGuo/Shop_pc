@@ -7,11 +7,12 @@
       :collapse="isCollapse"
       unique-opened
       router
+      show-timeout="200"
+      hide-timeout="200"
       @open="handleOpen"
       @close="handleClose"
       background-color="#304156"
-      text-color="#fff"
-  >
+      text-color="#fff">
     <MenuItem :menu-list="menuList"></MenuItem>
   </el-menu>
 </template>

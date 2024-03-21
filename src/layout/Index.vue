@@ -28,6 +28,7 @@
 <style lang="scss" scoped>
   .mycontainer {
     height: 100%;
+    background-color: #E4E7ED; /* 设置背景为浅灰色 */
     .aside {
 
     }
@@ -40,7 +41,10 @@
     }
 
     .mymain {
-
+      margin-top: 10px;
+      margin-left: 10px;
+      background-color: #F5F7FA;
+      border-radius: 10px;
     }
   }
 </style>

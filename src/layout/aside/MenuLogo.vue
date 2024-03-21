@@ -25,7 +25,7 @@
         if (!collapsed) {
           setTimeout(() => {
             show.value = !collapsed;
-          }, 500);
+          }, 350);
         } else {
           show.value = !collapsed;
         }
