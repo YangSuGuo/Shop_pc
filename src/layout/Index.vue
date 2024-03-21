@@ -41,6 +41,7 @@
     }
 
     .mymain {
+      padding: 0;
       margin-top: 10px;
       margin-left: 10px;
       background-color: #F5F7FA;
