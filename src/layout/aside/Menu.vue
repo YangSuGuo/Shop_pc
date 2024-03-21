@@ -194,7 +194,7 @@ let menuList = reactive([
 ],)
 // 不能折叠整个菜单
 // const isCollapse = ref(false)
-// 需要展开和收起的菜单的方法
+
 </script>
 <style scoped>
 .el-menu-vertical-demo:not(.el-menu--collapse) {
