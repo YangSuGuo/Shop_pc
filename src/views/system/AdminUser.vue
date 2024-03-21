@@ -5,12 +5,13 @@ import useDialog from "@/hooks/useDialog";
 
 import type {FormInstance} from "element-plus";
 
-const addRef = ref<FormInstance>()
+const addRef = ref<FormInstance>();
 const {dialog, onClose,} = useDialog();
 
 const searchParm = reactive({
   nickName: "",
 });
+
 const addModel = reactive({
   userId: "",
   username: "",
@@ -23,22 +24,22 @@ const addModel = reactive({
 const addBtn = () => {
   dialog.height = 300;
   dialog.visible = true;
-}
+};
+
 const rulse = reactive({
   username: [{required: true, message: '请输入登录账号', trigger: 'blur'}],
   password: [{required: true, message: '请输入登录密码', trigger: 'blur'}],
   nickName: [{required: true, message: '请输入名字', trigger: 'blur'}],
   phone: [{required: true, message: '请输入电话', trigger: 'blur'}],
   sex: [{required: true, message: '请选择性别', trigger: 'blur'}],
-})
+});
 const commit = () => {
   addRef.value?.validate((valid) => {
     if (valid) {
       dialog.visible = false;
     }
-  })
-
-}
+  });
+};
 
 </script>
 
@@ -52,7 +53,6 @@ const commit = () => {
         <el-button class="ml-5" type="primary">搜索</el-button>
         <el-button type="danger" icon="Close" plain>重置</el-button>
         <el-button class="ml-5" type="primary" icon="Plus" @click="addBtn">新增</el-button>
-
       </el-form-item>
     </el-form>
     <SysDialog
@@ -61,15 +61,12 @@ const commit = () => {
         :height="dialog.height"
         :visible="dialog.visible"
         @on-close="onClose"
-        @on-confirm="commit"
-
-    >
+        @on-confirm="commit">
       <template v-slot:content>
-        <el-form :model="addModel" :rules="rulse" ref="addRef">
+        <el-form :model="addModel" :rules="rulse" ref="addRef" label-width="auto" label-position="left">
           <el-form-item label="姓名" prop="nickName">
             <el-input v-model="addModel.nickName"></el-input>
           </el-form-item>
-
           <el-form-item label="性别" prop="sex">
             <el-radio-group v-model="addModel.sex">
               <el-radio :label="0">男</el-radio>
@@ -91,12 +88,9 @@ const commit = () => {
               <el-radio :label="1">停用</el-radio>
             </el-radio-group>
           </el-form-item>
-
         </el-form>
-
       </template>
     </SysDialog>
-
   </el-main>
 </template>
 
