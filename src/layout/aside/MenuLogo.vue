@@ -1,7 +1,13 @@
 <template>
   <!-- logo图片 -->
   <div class="logo">
-    <img :src="ConneR_Logo" alt="logo"/>
+    <el-image class="img" :src="ConneR_Logo" fit="cover" loading="lazy">
+      <template #error>
+        <div class="image-slot">
+          <el-icon><icon-picture /></el-icon>
+        </div>
+      </template>
+    </el-image>
     <span v-show="show" class="logo-title">{{ title }}</span>
   </div>
 </template>
@@ -42,11 +48,12 @@
   }
 
   /* 图片 */
-  img {
+  .img {
     width: 36px;
     height: 36px;
     margin-right: 12px;
     margin-left: 20px;
+    border-radius: 35%;
   }
 
   .logo-title {
